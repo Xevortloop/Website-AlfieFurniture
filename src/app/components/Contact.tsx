@@ -106,9 +106,9 @@ export function Contact() {
                             <div>
                                 <h3 className="text-lg text-[#2D2A26] mb-2">Alamat</h3>
                                 <p className="text-[#706C66]">
-                                    Jl. Kayu Manis No. 123<br />
-                                    Jakarta Selatan 12345<br />
-                                    Indonesia
+                                    Jl. Solo - Purwodadi, Dusun II, Karangjati<br />
+                                    Kec. Kalijambe, Kabupaten Sragen<br />
+                                    Jawa Tengah 57275
                                 </p>
                             </div>
                         </div>
@@ -128,14 +128,18 @@ export function Contact() {
                         </div>
                     </div>
 
-                    {/* Map Placeholder */}
-                    <div className="bg-white rounded-2xl overflow-hidden border border-[#E8E3DC] h-64">
-                        <div className="w-full h-full bg-[#F5F1EB] flex items-center justify-center">
-                            <div className="text-center">
-                                <MapPin className="w-12 h-12 text-[#DC143C] mx-auto mb-3" />
-                                <p className="text-[#706C66]">Peta Lokasi</p>
-                            </div>
-                        </div>
+                    {/* Interactive Map */}
+                    <div className="bg-white rounded-2xl overflow-hidden border border-[#E8E3DC] h-96">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.0!2d110.8156658!3d-7.4203108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjUnMTMuMSJTIDExMMKwNDgnNTYuNCJF!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Lokasi ALFie Furniture"
+                        ></iframe>
                     </div>
                 </div>
             </div>
