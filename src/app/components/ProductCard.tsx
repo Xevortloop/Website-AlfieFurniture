@@ -43,7 +43,7 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
           </div>
         )}
         {product.inStock && (
-          <div className="absolute top-3 right-3 bg-[#8B6F47]/90 text-white px-3 py-1 rounded-full text-xs">
+          <div className="absolute top-3 right-3 bg-[#DC143C]/90 text-white px-3 py-1 rounded-full text-xs">
             Tersedia
           </div>
         )}
@@ -52,11 +52,11 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
       {/* Product Info */}
       <div className="p-5">
         <div className="mb-2">
-          <span className="text-xs text-[#8B6F47] uppercase tracking-wide">
+          <span className="text-xs text-[#D4AF37] font-semibold uppercase tracking-wide">
             {product.woodType}
           </span>
         </div>
-        <h3 className="text-lg text-[#2D2A26] mb-2 group-hover:text-[#8B6F47] transition-colors">
+        <h3 className="text-lg text-[#2D2A26] mb-2 group-hover:text-[#DC143C] transition-colors">
           {product.name}
         </h3>
 
@@ -80,8 +80,8 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
             onClick={handleAddToCart}
             disabled={!product.inStock}
             className={`p-2 rounded-lg transition-all ${product.inStock
-                ? 'bg-[#8B6F47] text-white hover:bg-[#6F5838] hover:shadow-lg'
-                : 'bg-[#E8E3DC] text-[#C4BBAE] cursor-not-allowed'
+              ? 'bg-[#DC143C] text-white hover:bg-[#B01030] hover:shadow-lg'
+              : 'bg-[#E8E3DC] text-[#C4BBAE] cursor-not-allowed'
               }`}
           >
             <ShoppingCart className="w-5 h-5" />

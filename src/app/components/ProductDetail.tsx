@@ -37,7 +37,7 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
             {/* Info */}
             <div>
               <div className="mb-4">
-                <span className="text-sm text-[#8B6F47] uppercase tracking-wide">
+                <span className="text-sm text-[#DC143C] uppercase tracking-wide">
                   {product.woodType}
                 </span>
               </div>
@@ -51,8 +51,8 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
               {/* Availability */}
               <div className="mb-6">
                 {product.inStock ? (
-                  <div className="flex items-center gap-2 text-[#8B6F47]">
-                    <div className="w-2 h-2 bg-[#8B6F47] rounded-full"></div>
+                  <div className="flex items-center gap-2 text-[#DC143C]">
+                    <div className="w-2 h-2 bg-[#DC143C] rounded-full"></div>
                     <span>Tersedia</span>
                   </div>
                 ) : (
@@ -68,7 +68,7 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
                 <h4 className="text-lg text-[#2D2A26]">Spesifikasi</h4>
 
                 <div className="flex items-center gap-3 p-3 bg-[#F5F1EB] rounded-lg">
-                  <Ruler className="w-5 h-5 text-[#8B6F47]" />
+                  <Ruler className="w-5 h-5 text-[#DC143C]" />
                   <div>
                     <div className="text-xs text-[#706C66]">Ukuran</div>
                     <div className="text-sm text-[#2D2A26]">{product.size}</div>
@@ -76,7 +76,7 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
                 </div>
 
                 <div className="flex items-center gap-3 p-3 bg-[#F5F1EB] rounded-lg">
-                  <Tag className="w-5 h-5 text-[#8B6F47]" />
+                  <Tag className="w-5 h-5 text-[#DC143C]" />
                   <div>
                     <div className="text-xs text-[#706C66]">Finishing</div>
                     <div className="text-sm text-[#2D2A26]">{product.finish}</div>
@@ -84,7 +84,7 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
                 </div>
 
                 <div className="flex items-center gap-3 p-3 bg-[#F5F1EB] rounded-lg">
-                  <Package className="w-5 h-5 text-[#8B6F47]" />
+                  <Package className="w-5 h-5 text-[#DC143C]" />
                   <div>
                     <div className="text-xs text-[#706C66]">Terbaik untuk</div>
                     <div className="text-sm text-[#2D2A26]">{product.usage}</div>
@@ -98,14 +98,14 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
                   onClick={onAddToCart}
                   disabled={!product.inStock}
                   className={`flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-lg transition-all ${product.inStock
-                      ? 'bg-[#8B6F47] text-white hover:bg-[#6F5838] hover:shadow-lg'
+                      ? 'bg-[#DC143C] text-white hover:bg-[#B01030] hover:shadow-lg'
                       : 'bg-[#E8E3DC] text-[#C4BBAE] cursor-not-allowed'
                     }`}
                 >
                   <ShoppingCart className="w-5 h-5" />
                   Tambah ke Keranjang
                 </button>
-                <button className="flex-1 px-6 py-3 rounded-lg border-2 border-[#8B6F47] text-[#8B6F47] hover:bg-[#8B6F47] hover:text-white transition-all">
+                <button className="flex-1 px-6 py-3 rounded-lg border-2 border-[#DC143C] text-[#DC143C] hover:bg-[#DC143C] hover:text-white transition-all">
                   Minta Ukuran Khusus
                 </button>
               </div>

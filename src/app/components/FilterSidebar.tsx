@@ -56,7 +56,7 @@ export function FilterSidebar({
                   type="checkbox"
                   checked={selectedWoodType.includes(type)}
                   onChange={() => onWoodTypeChange(type)}
-                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#8B6F47] focus:ring-[#8B6F47]"
+                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#DC143C] focus:ring-[#DC143C]"
                 />
                 <span className="text-sm text-[#706C66] group-hover:text-[#2D2A26] transition-colors">
                   {type}
@@ -87,7 +87,7 @@ export function FilterSidebar({
                   type="checkbox"
                   checked={selectedUsage.includes(usage)}
                   onChange={() => onUsageChange(usage)}
-                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#8B6F47] focus:ring-[#8B6F47]"
+                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#DC143C] focus:ring-[#DC143C]"
                 />
                 <span className="text-sm text-[#706C66] group-hover:text-[#2D2A26] transition-colors">
                   {usage}
@@ -118,7 +118,7 @@ export function FilterSidebar({
                   type="checkbox"
                   checked={selectedFinish.includes(finish)}
                   onChange={() => onFinishChange(finish)}
-                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#8B6F47] focus:ring-[#8B6F47]"
+                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#DC143C] focus:ring-[#DC143C]"
                 />
                 <span className="text-sm text-[#706C66] group-hover:text-[#2D2A26] transition-colors">
                   {finish}

@@ -19,7 +19,7 @@ export function Contact() {
                             <label className="block text-[#2D2A26] mb-2">Nama Lengkap</label>
                             <input
                                 type="text"
-                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
+                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#DC143C] focus:border-transparent"
                                 placeholder="Masukkan nama Anda"
                             />
                         </div>
@@ -28,7 +28,7 @@ export function Contact() {
                             <label className="block text-[#2D2A26] mb-2">Email</label>
                             <input
                                 type="email"
-                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
+                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#DC143C] focus:border-transparent"
                                 placeholder="nama@email.com"
                             />
                         </div>
@@ -37,7 +37,7 @@ export function Contact() {
                             <label className="block text-[#2D2A26] mb-2">Nomor Telepon</label>
                             <input
                                 type="tel"
-                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
+                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#DC143C] focus:border-transparent"
                                 placeholder="+62 xxx xxxx xxxx"
                             />
                         </div>
@@ -46,7 +46,7 @@ export function Contact() {
                             <label className="block text-[#2D2A26] mb-2">Subjek</label>
                             <input
                                 type="text"
-                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
+                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#DC143C] focus:border-transparent"
                                 placeholder="Perihal pesan Anda"
                             />
                         </div>
@@ -55,14 +55,14 @@ export function Contact() {
                             <label className="block text-[#2D2A26] mb-2">Pesan</label>
                             <textarea
                                 rows={5}
-                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent resize-none"
+                                className="w-full px-4 py-3 rounded-lg border border-[#E8E3DC] focus:outline-none focus:ring-2 focus:ring-[#DC143C] focus:border-transparent resize-none"
                                 placeholder="Tulis pesan Anda di sini..."
                             ></textarea>
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full bg-[#8B6F47] text-white px-8 py-3 rounded-lg hover:bg-[#6F5838] transition-all hover:shadow-lg"
+                            className="w-full bg-[#DC143C] text-white px-8 py-3 rounded-lg hover:bg-[#B01030] transition-all hover:shadow-lg"
                         >
                             Kirim Pesan
                         </button>
@@ -75,7 +75,7 @@ export function Contact() {
                     <div className="bg-white rounded-2xl p-6 border border-[#E8E3DC]">
                         <div className="flex items-start gap-4">
                             <div className="bg-[#F5F1EB] p-3 rounded-xl">
-                                <Phone className="w-6 h-6 text-[#8B6F47]" />
+                                <Phone className="w-6 h-6 text-[#DC143C]" />
                             </div>
                             <div>
                                 <h3 className="text-lg text-[#2D2A26] mb-2">Telepon</h3>
@@ -88,7 +88,7 @@ export function Contact() {
                     <div className="bg-white rounded-2xl p-6 border border-[#E8E3DC]">
                         <div className="flex items-start gap-4">
                             <div className="bg-[#F5F1EB] p-3 rounded-xl">
-                                <Mail className="w-6 h-6 text-[#8B6F47]" />
+                                <Mail className="w-6 h-6 text-[#DC143C]" />
                             </div>
                             <div>
                                 <h3 className="text-lg text-[#2D2A26] mb-2">Email</h3>
@@ -101,7 +101,7 @@ export function Contact() {
                     <div className="bg-white rounded-2xl p-6 border border-[#E8E3DC]">
                         <div className="flex items-start gap-4">
                             <div className="bg-[#F5F1EB] p-3 rounded-xl">
-                                <MapPin className="w-6 h-6 text-[#8B6F47]" />
+                                <MapPin className="w-6 h-6 text-[#DC143C]" />
                             </div>
                             <div>
                                 <h3 className="text-lg text-[#2D2A26] mb-2">Alamat</h3>
@@ -117,7 +117,7 @@ export function Contact() {
                     <div className="bg-white rounded-2xl p-6 border border-[#E8E3DC]">
                         <div className="flex items-start gap-4">
                             <div className="bg-[#F5F1EB] p-3 rounded-xl">
-                                <Clock className="w-6 h-6 text-[#8B6F47]" />
+                                <Clock className="w-6 h-6 text-[#DC143C]" />
                             </div>
                             <div>
                                 <h3 className="text-lg text-[#2D2A26] mb-2">Jam Operasional</h3>
@@ -132,7 +132,7 @@ export function Contact() {
                     <div className="bg-white rounded-2xl overflow-hidden border border-[#E8E3DC] h-64">
                         <div className="w-full h-full bg-[#F5F1EB] flex items-center justify-center">
                             <div className="text-center">
-                                <MapPin className="w-12 h-12 text-[#8B6F47] mx-auto mb-3" />
+                                <MapPin className="w-12 h-12 text-[#DC143C] mx-auto mb-3" />
                                 <p className="text-[#706C66]">Peta Lokasi</p>
                             </div>
                         </div>

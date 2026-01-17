@@ -91,7 +91,7 @@ export function Projects() {
 
                         {/* Content */}
                         <div className="p-6">
-                            <h3 className="text-xl text-[#2D2A26] mb-3 group-hover:text-[#8B6F47] transition-colors">
+                            <h3 className="text-xl text-[#2D2A26] mb-3 group-hover:text-[#DC143C] transition-colors">
                                 {project.title}
                             </h3>
                             <p className="text-[#706C66] text-sm mb-4 line-clamp-2">
@@ -101,15 +101,15 @@ export function Projects() {
                             {/* Meta Info */}
                             <div className="space-y-2 mb-4">
                                 <div className="flex items-center gap-2 text-sm text-[#706C66]">
-                                    <User className="w-4 h-4 text-[#8B6F47]" />
+                                    <User className="w-4 h-4 text-[#DC143C]" />
                                     {project.client}
                                 </div>
                                 <div className="flex items-center gap-2 text-sm text-[#706C66]">
-                                    <MapPin className="w-4 h-4 text-[#8B6F47]" />
+                                    <MapPin className="w-4 h-4 text-[#DC143C]" />
                                     {project.location}
                                 </div>
                                 <div className="flex items-center gap-2 text-sm text-[#706C66]">
-                                    <Calendar className="w-4 h-4 text-[#8B6F47]" />
+                                    <Calendar className="w-4 h-4 text-[#DC143C]" />
                                     {project.date}
                                 </div>
                             </div>
@@ -119,7 +119,7 @@ export function Projects() {
                                 {project.materials.map((material, index) => (
                                     <span
                                         key={index}
-                                        className="text-xs bg-[#F5F1EB] text-[#8B6F47] px-3 py-1 rounded-full"
+                                        className="text-xs bg-[#F5F1EB] text-[#DC143C] px-3 py-1 rounded-full"
                                     >
                                         {material}
                                     </span>
@@ -131,12 +131,12 @@ export function Projects() {
             </div>
 
             {/* CTA Section */}
-            <div className="mt-16 bg-[#8B6F47] rounded-3xl p-12 text-center">
+            <div className="mt-16 bg-[#DC143C] rounded-3xl p-12 text-center">
                 <h2 className="text-3xl text-white mb-4">Punya Proyek?</h2>
                 <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
                     Hubungi kami untuk konsultasi gratis dan dapatkan solusi kayu terbaik untuk proyek Anda
                 </p>
-                <button className="bg-white text-[#8B6F47] px-8 py-3 rounded-lg hover:bg-[#F5F1EB] transition-all hover:shadow-lg">
+                <button className="bg-white text-[#DC143C] px-8 py-3 rounded-lg hover:bg-[#F5F1EB] transition-all hover:shadow-lg">
                     Hubungi Kami Sekarang
                 </button>
             </div>

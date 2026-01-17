@@ -64,24 +64,24 @@ export function Categories() {
 
                                 {/* Icon */}
                                 <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl">
-                                    <Icon className="w-8 h-8 text-[#8B6F47]" />
+                                    <Icon className="w-8 h-8 text-[#DC143C]" />
                                 </div>
 
                                 {/* Count Badge */}
-                                <div className="absolute bottom-6 right-6 bg-[#8B6F47] text-white px-4 py-2 rounded-full text-sm font-medium">
+                                <div className="absolute bottom-6 right-6 bg-[#D4AF37] text-white px-4 py-2 rounded-full text-sm font-medium">
                                     {category.count} Produk
                                 </div>
                             </div>
 
                             {/* Content */}
                             <div className="p-6">
-                                <h3 className="text-2xl text-[#2D2A26] mb-3 group-hover:text-[#8B6F47] transition-colors">
+                                <h3 className="text-2xl text-[#2D2A26] mb-3 group-hover:text-[#DC143C] transition-colors">
                                     {category.name}
                                 </h3>
                                 <p className="text-[#706C66] leading-relaxed mb-4">
                                     {category.description}
                                 </p>
-                                <button className="text-[#8B6F47] font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                                <button className="text-[#DC143C] font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
                                     Lihat Produk
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -96,19 +96,19 @@ export function Categories() {
             {/* Stats Section */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="bg-white rounded-xl p-6 border border-[#E8E3DC] text-center">
-                    <div className="text-3xl text-[#8B6F47] mb-2">143+</div>
+                    <div className="text-3xl text-[#DC143C] mb-2">143+</div>
                     <div className="text-[#706C66]">Total Produk</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-[#E8E3DC] text-center">
-                    <div className="text-3xl text-[#8B6F47] mb-2">15+</div>
+                    <div className="text-3xl text-[#D4AF37] mb-2">15+</div>
                     <div className="text-[#706C66]">Jenis Kayu</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-[#E8E3DC] text-center">
-                    <div className="text-3xl text-[#8B6F47] mb-2">4</div>
+                    <div className="text-3xl text-[#DC143C] mb-2">4</div>
                     <div className="text-[#706C66]">Kategori Utama</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-[#E8E3DC] text-center">
-                    <div className="text-3xl text-[#8B6F47] mb-2">100%</div>
+                    <div className="text-3xl text-[#D4AF37] mb-2">100%</div>
                     <div className="text-[#706C66]">Kualitas Premium</div>
                 </div>
             </div>

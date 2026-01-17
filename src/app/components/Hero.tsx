@@ -21,10 +21,10 @@ export function Hero() {
             Temukan koleksi kayu berkualitas tinggi kami. Dari jati yang elegan hingga oak yang klasik, setiap potongan menceritakan kisah keahlian alam.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-[#8B6F47] text-white px-8 py-3 rounded-lg hover:bg-[#6F5838] transition-all hover:shadow-lg hover:scale-105">
+            <button className="bg-[#DC143C] text-white px-8 py-3 rounded-lg hover:bg-[#B01030] transition-all hover:shadow-lg hover:scale-105">
               Jelajahi Katalog
             </button>
-            <button className="bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-lg border border-white/30 hover:bg-white/20 transition-all">
+            <button className="bg-[#D4AF37] text-white px-8 py-3 rounded-lg hover:bg-[#C9A961] transition-all hover:shadow-lg hover:scale-105">
               Minta Penawaran
             </button>
           </div>

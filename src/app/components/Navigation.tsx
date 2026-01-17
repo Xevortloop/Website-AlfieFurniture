@@ -16,47 +16,51 @@ export function Navigation({ cartItemCount, activePage, onNavigate }: Navigation
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#8B6F47] rounded-sm flex items-center justify-center">
-                <div className="w-5 h-5 border-2 border-[#F5F1EB] rounded-sm rotate-45"></div>
+            <button onClick={() => onNavigate('products')} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <img src="/Website-AlfieFurniture/assets/logo.jpeg" alt="ALFie Furniture" className="h-12 w-auto" />
+              <div className="flex flex-col leading-tight">
+                <div className="text-2xl font-bold">
+                  <span className="text-[#DC143C]">ALFie</span>
+                  <span className="text-[#D4AF37]"> Furniture</span>
+                </div>
+                <span className="text-xs text-[#706C66] -mt-1">kreasikan ruang impian Anda</span>
               </div>
-              <span className="text-xl text-[#2D2A26]">AlfieFurniture</span>
-            </div>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => onNavigate('products')}
-              className={`transition-colors ${activePage === 'products' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+              className={`transition-colors ${activePage === 'products' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                 }`}
             >
               Produk
             </button>
             <button
               onClick={() => onNavigate('categories')}
-              className={`transition-colors ${activePage === 'categories' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+              className={`transition-colors ${activePage === 'categories' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                 }`}
             >
               Kategori
             </button>
             <button
               onClick={() => onNavigate('about')}
-              className={`transition-colors ${activePage === 'about' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+              className={`transition-colors ${activePage === 'about' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                 }`}
             >
               Tentang Kayu
             </button>
             <button
               onClick={() => onNavigate('projects')}
-              className={`transition-colors ${activePage === 'projects' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+              className={`transition-colors ${activePage === 'projects' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                 }`}
             >
               Proyek
             </button>
             <button
               onClick={() => onNavigate('contact')}
-              className={`transition-colors ${activePage === 'contact' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+              className={`transition-colors ${activePage === 'contact' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                 }`}
             >
               Kontak
@@ -76,7 +80,7 @@ export function Navigation({ cartItemCount, activePage, onNavigate }: Navigation
             <button className="relative p-2 hover:bg-[#F5F1EB] rounded-full transition-colors">
               <ShoppingCart className="w-5 h-5 text-[#2D2A26]" />
               {cartItemCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#8B6F47] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-[#DC143C] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {cartItemCount}
                 </span>
               )}
@@ -96,35 +100,35 @@ export function Navigation({ cartItemCount, activePage, onNavigate }: Navigation
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => { onNavigate('products'); setIsMenuOpen(false); }}
-                className={`text-left transition-colors ${activePage === 'products' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+                className={`text-left transition-colors ${activePage === 'products' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                   }`}
               >
                 Produk
               </button>
               <button
                 onClick={() => { onNavigate('categories'); setIsMenuOpen(false); }}
-                className={`text-left transition-colors ${activePage === 'categories' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+                className={`text-left transition-colors ${activePage === 'categories' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                   }`}
               >
                 Kategori
               </button>
               <button
                 onClick={() => { onNavigate('about'); setIsMenuOpen(false); }}
-                className={`text-left transition-colors ${activePage === 'about' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+                className={`text-left transition-colors ${activePage === 'about' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                   }`}
               >
                 Tentang Kayu
               </button>
               <button
                 onClick={() => { onNavigate('projects'); setIsMenuOpen(false); }}
-                className={`text-left transition-colors ${activePage === 'projects' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+                className={`text-left transition-colors ${activePage === 'projects' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                   }`}
               >
                 Proyek
               </button>
               <button
                 onClick={() => { onNavigate('contact'); setIsMenuOpen(false); }}
-                className={`text-left transition-colors ${activePage === 'contact' ? 'text-[#8B6F47] font-medium' : 'text-[#2D2A26] hover:text-[#8B6F47]'
+                className={`text-left transition-colors ${activePage === 'contact' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                   }`}
               >
                 Kontak

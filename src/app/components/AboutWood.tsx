@@ -31,7 +31,7 @@ export function AboutWood() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                 <div className="bg-white rounded-2xl p-8 border border-[#E8E3DC] hover:shadow-xl transition-all">
                     <div className="bg-[#F5F1EB] w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                        <TreePine className="w-8 h-8 text-[#8B6F47]" />
+                        <TreePine className="w-8 h-8 text-[#DC143C]" />
                     </div>
                     <h3 className="text-xl text-[#2D2A26] mb-3">Sumber Berkelanjutan</h3>
                     <p className="text-[#706C66]">
@@ -41,7 +41,7 @@ export function AboutWood() {
 
                 <div className="bg-white rounded-2xl p-8 border border-[#E8E3DC] hover:shadow-xl transition-all">
                     <div className="bg-[#F5F1EB] w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                        <Shield className="w-8 h-8 text-[#8B6F47]" />
+                        <Shield className="w-8 h-8 text-[#DC143C]" />
                     </div>
                     <h3 className="text-xl text-[#2D2A26] mb-3">Terjamin Kualitas</h3>
                     <p className="text-[#706C66]">
@@ -51,7 +51,7 @@ export function AboutWood() {
 
                 <div className="bg-white rounded-2xl p-8 border border-[#E8E3DC] hover:shadow-xl transition-all">
                     <div className="bg-[#F5F1EB] w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                        <Leaf className="w-8 h-8 text-[#8B6F47]" />
+                        <Leaf className="w-8 h-8 text-[#DC143C]" />
                     </div>
                     <h3 className="text-xl text-[#2D2A26] mb-3">Ramah Lingkungan</h3>
                     <p className="text-[#706C66]">
@@ -61,7 +61,7 @@ export function AboutWood() {
 
                 <div className="bg-white rounded-2xl p-8 border border-[#E8E3DC] hover:shadow-xl transition-all">
                     <div className="bg-[#F5F1EB] w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                        <Sparkles className="w-8 h-8 text-[#8B6F47]" />
+                        <Sparkles className="w-8 h-8 text-[#DC143C]" />
                     </div>
                     <h3 className="text-xl text-[#2D2A26] mb-3">Finishing Premium</h3>
                     <p className="text-[#706C66]">
@@ -75,25 +75,25 @@ export function AboutWood() {
                 <h2 className="text-3xl text-[#2D2A26] mb-8">Jenis Kayu Kami</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                        <h3 className="text-xl text-[#8B6F47] mb-4">Kayu Jati</h3>
+                        <h3 className="text-xl text-[#DC143C] mb-4">Kayu Jati</h3>
                         <p className="text-[#706C66] mb-6">
                             Kayu jati terkenal dengan kekuatan, daya tahan, dan keindahan alaminya. Sempurna untuk furnitur mewah dan aplikasi eksterior.
                         </p>
                     </div>
                     <div>
-                        <h3 className="text-xl text-[#8B6F47] mb-4">Kayu Oak</h3>
+                        <h3 className="text-xl text-[#DC143C] mb-4">Kayu Oak</h3>
                         <p className="text-[#706C66] mb-6">
                             Oak menawarkan kekuatan luar biasa dan pola serat yang indah, ideal untuk lantai dan furnitur klasik.
                         </p>
                     </div>
                     <div>
-                        <h3 className="text-xl text-[#8B6F47] mb-4">Kayu Walnut</h3>
+                        <h3 className="text-xl text-[#DC143C] mb-4">Kayu Walnut</h3>
                         <p className="text-[#706C66] mb-6">
                             Walnut memberikan warna gelap yang kaya dan tekstur halus, sempurna untuk furnitur premium dan panel dekoratif.
                         </p>
                     </div>
                     <div>
-                        <h3 className="text-xl text-[#8B6F47] mb-4">Kayu Mahoni</h3>
+                        <h3 className="text-xl text-[#DC143C] mb-4">Kayu Mahoni</h3>
                         <p className="text-[#706C66] mb-6">
                             Mahoni dikenal dengan warna merah kecoklatan yang indah dan kemudahan dalam pengerjaan, ideal untuk berbagai aplikasi.
                         </p>
