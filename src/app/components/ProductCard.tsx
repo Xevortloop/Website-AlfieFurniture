@@ -20,7 +20,7 @@ interface ProductCardProps {
 export function ProductCard({ product, onClick }: ProductCardProps) {
   const handleWhatsApp = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const message = `Halo, saya tertarik dengan produk:\n\n*${product.name}*\nKategori: ${product.category}\nUkuran: ${product.size}\nFinishing: ${product.finish}\n\nApakah bisa dibuatkan sesuai dengan spesifikasi ini?`;
+    const message = `Halo, saya tertarik dengan produk:\n\n*${product.name}*\nKategori: ${product.category}\nFinishing: ${product.finish}\n\nApakah bisa dibuatkan sesuai dengan spesifikasi ini?`;
     const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
