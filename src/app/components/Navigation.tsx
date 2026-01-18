@@ -37,25 +37,11 @@ export function Navigation({ activePage, onNavigate }: NavigationProps) {
               Produk
             </button>
             <button
-              onClick={() => onNavigate('categories')}
-              className={`transition-colors ${activePage === 'categories' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
-                }`}
-            >
-              Kategori
-            </button>
-            <button
               onClick={() => onNavigate('about')}
               className={`transition-colors ${activePage === 'about' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                 }`}
             >
               Tentang Kayu
-            </button>
-            <button
-              onClick={() => onNavigate('projects')}
-              className={`transition-colors ${activePage === 'projects' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
-                }`}
-            >
-              Proyek
             </button>
             <button
               onClick={() => onNavigate('contact')}
@@ -97,25 +83,11 @@ export function Navigation({ activePage, onNavigate }: NavigationProps) {
                 Produk
               </button>
               <button
-                onClick={() => { onNavigate('categories'); setIsMenuOpen(false); }}
-                className={`text-left transition-colors ${activePage === 'categories' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
-                  }`}
-              >
-                Kategori
-              </button>
-              <button
                 onClick={() => { onNavigate('about'); setIsMenuOpen(false); }}
                 className={`text-left transition-colors ${activePage === 'about' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
                   }`}
               >
                 Tentang Kayu
-              </button>
-              <button
-                onClick={() => { onNavigate('projects'); setIsMenuOpen(false); }}
-                className={`text-left transition-colors ${activePage === 'projects' ? 'text-[#DC143C] font-medium' : 'text-[#2D2A26] hover:text-[#DC143C]'
-                  }`}
-              >
-                Proyek
               </button>
               <button
                 onClick={() => { onNavigate('contact'); setIsMenuOpen(false); }}
