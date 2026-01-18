@@ -2,25 +2,20 @@ import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 interface FilterSidebarProps {
-  selectedWoodType: string[];
-  selectedUsage: string[];
+  selectedCategory: string[];
   selectedFinish: string[];
-  onWoodTypeChange: (type: string) => void;
-  onUsageChange: (usage: string) => void;
+  onCategoryChange: (category: string) => void;
   onFinishChange: (finish: string) => void;
 }
 
 export function FilterSidebar({
-  selectedWoodType,
-  selectedUsage,
+  selectedCategory,
   selectedFinish,
-  onWoodTypeChange,
-  onUsageChange,
+  onCategoryChange,
   onFinishChange,
 }: FilterSidebarProps) {
   const [expandedSections, setExpandedSections] = useState({
-    woodType: true,
-    usage: true,
+    category: true,
     finish: true,
   });
 
@@ -28,69 +23,37 @@ export function FilterSidebar({
     setExpandedSections((prev) => ({ ...prev, [section]: !prev[section] }));
   };
 
-  const woodTypes = ['Teak', 'Mahogany', 'Pine', 'Oak', 'Walnut'];
-  const usageTypes = ['Furniture', 'Flooring', 'Construction', 'Decorative'];
-  const finishTypes = ['Raw', 'Polished', 'Treated', 'Varnished'];
+  const categories = ['Meja', 'Meja Rias', 'Sofa', 'Almari Besi', 'Kursi Tamu Jati', 'Kursi Tamu Akasia'];
+  const finishTypes = ['Natural Varnish', 'Glossy Brown', 'Fabric Upholstery', 'Powder Coating', 'Natural Wood', 'Natural Oil', 'Matte Black', 'Duco White', 'Leather Upholstery', 'Grey Powder Coating', 'Light Oak'];
 
   return (
     <aside className="w-full lg:w-64 bg-white rounded-2xl border border-[#E8E3DC] p-6 h-fit sticky top-24">
       <h2 className="text-xl text-[#2D2A26] mb-6">Filter</h2>
 
-      {/* Wood Type Filter */}
+      {/* Category Filter */}
       <div className="mb-6">
         <button
-          onClick={() => toggleSection('woodType')}
+          onClick={() => toggleSection('category')}
           className="flex items-center justify-between w-full mb-3"
         >
-          <span className="text-[#2D2A26]">Jenis Kayu</span>
+          <span className="text-[#2D2A26]">Kategori Produk</span>
           <ChevronDown
-            className={`w-4 h-4 text-[#706C66] transition-transform ${expandedSections.woodType ? 'rotate-180' : ''
+            className={`w-4 h-4 text-[#706C66] transition-transform ${expandedSections.category ? 'rotate-180' : ''
               }`}
           />
         </button>
-        {expandedSections.woodType && (
+        {expandedSections.category && (
           <div className="space-y-2">
-            {woodTypes.map((type) => (
-              <label key={type} className="flex items-center gap-2 cursor-pointer group">
+            {categories.map((category) => (
+              <label key={category} className="flex items-center gap-2 cursor-pointer group">
                 <input
                   type="checkbox"
-                  checked={selectedWoodType.includes(type)}
-                  onChange={() => onWoodTypeChange(type)}
+                  checked={selectedCategory.includes(category)}
+                  onChange={() => onCategoryChange(category)}
                   className="w-4 h-4 rounded border-[#C4BBAE] text-[#DC143C] focus:ring-[#DC143C]"
                 />
                 <span className="text-sm text-[#706C66] group-hover:text-[#2D2A26] transition-colors">
-                  {type}
-                </span>
-              </label>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Usage Filter */}
-      <div className="mb-6">
-        <button
-          onClick={() => toggleSection('usage')}
-          className="flex items-center justify-between w-full mb-3"
-        >
-          <span className="text-[#2D2A26]">Penggunaan</span>
-          <ChevronDown
-            className={`w-4 h-4 text-[#706C66] transition-transform ${expandedSections.usage ? 'rotate-180' : ''
-              }`}
-          />
-        </button>
-        {expandedSections.usage && (
-          <div className="space-y-2">
-            {usageTypes.map((usage) => (
-              <label key={usage} className="flex items-center gap-2 cursor-pointer group">
-                <input
-                  type="checkbox"
-                  checked={selectedUsage.includes(usage)}
-                  onChange={() => onUsageChange(usage)}
-                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#DC143C] focus:ring-[#DC143C]"
-                />
-                <span className="text-sm text-[#706C66] group-hover:text-[#2D2A26] transition-colors">
-                  {usage}
+                  {category}
                 </span>
               </label>
             ))}

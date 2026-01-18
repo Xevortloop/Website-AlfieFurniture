@@ -9,121 +9,144 @@ import { AboutWood } from '@/app/components/AboutWood';
 import { Projects } from '@/app/components/Projects';
 import { Contact } from '@/app/components/Contact';
 
-// Mock product data
+// Product data with furniture categories
 const products: Product[] = [
   {
     id: 1,
-    name: 'Premium Teak Wood Panel',
-    woodType: 'Teak',
-    price: 89.99,
-    unit: 'm²',
-    size: '2400 x 1200mm',
-    finish: 'Polished',
-    usage: 'Furniture',
-    image: 'https://images.unsplash.com/photo-1702180448394-4226879fe3b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFrJTIwd29vZCUyMHBhbmVsfGVufDF8fHx8MTc2Nzk5ODg2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Meja Makan Minimalis Jati',
+    category: 'Meja',
+    price: 3500000,
+    unit: 'unit',
+    size: '150 x 80 x 75 cm',
+    finish: 'Natural Varnish',
+    image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=80',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Classic Oak Plank',
-    woodType: 'Oak',
-    price: 65.50,
-    unit: 'm²',
-    size: '2000 x 200mm',
-    finish: 'Raw',
-    usage: 'Flooring',
-    image: 'https://images.unsplash.com/photo-1690522399419-63543099915a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvYWslMjB3b29kJTIwcGxhbmt8ZW58MXx8fHwxNzY3OTk4ODYyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Meja Rias Klasik Mahoni',
+    category: 'Meja Rias',
+    price: 2800000,
+    unit: 'unit',
+    size: '120 x 50 x 140 cm',
+    finish: 'Glossy Brown',
+    image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80',
     inStock: true,
   },
   {
     id: 3,
-    name: 'Walnut Furniture Board',
-    woodType: 'Walnut',
-    price: 125.00,
-    unit: 'piece',
-    size: '3000 x 400mm',
-    finish: 'Varnished',
-    usage: 'Furniture',
-    image: 'https://images.unsplash.com/photo-1732575966442-b2d665c080d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YWxudXQlMjB3b29kJTIwZnVybml0dXJlfGVufDF8fHx8MTc2Nzk5ODg2M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Sofa Minimalis 3 Dudukan',
+    category: 'Sofa',
+    price: 4500000,
+    unit: 'unit',
+    size: '200 x 85 x 80 cm',
+    finish: 'Fabric Upholstery',
+    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
     inStock: true,
   },
   {
     id: 4,
-    name: 'Mahogany Premium Panel',
-    woodType: 'Mahogany',
-    price: 145.99,
-    unit: 'm²',
-    size: '2400 x 1200mm',
-    finish: 'Polished',
-    usage: 'Decorative',
-    image: 'https://images.unsplash.com/photo-1656733911001-16912b79d2bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWhvZ2FueSUyMHdvb2R8ZW58MXx8fHwxNzY3OTk4ODYzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Almari Besi 2 Pintu',
+    category: 'Almari Besi',
+    price: 1800000,
+    unit: 'unit',
+    size: '90 x 50 x 180 cm',
+    finish: 'Powder Coating',
+    image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80',
     inStock: true,
   },
   {
     id: 5,
-    name: 'Pine Construction Lumber',
-    woodType: 'Pine',
-    price: 45.00,
-    unit: 'piece',
-    size: '2400 x 150mm',
-    finish: 'Raw',
-    usage: 'Construction',
-    image: 'https://images.unsplash.com/photo-1566918756489-f9687075050a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaW5lJTIwd29vZCUyMGx1bWJlcnxlbnwxfHx8fDE3Njc5OTg4NjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Kursi Tamu Jati Ukir',
+    category: 'Kursi Tamu Jati',
+    price: 5200000,
+    unit: 'set',
+    size: 'Set 3+2+1',
+    finish: 'Natural Wood',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
     inStock: true,
   },
   {
     id: 6,
-    name: 'Oak Flooring Premium',
-    woodType: 'Oak',
-    price: 78.50,
-    unit: 'm²',
-    size: '1800 x 180mm',
-    finish: 'Treated',
-    usage: 'Flooring',
-    image: 'https://images.unsplash.com/photo-1693948568453-a3564f179a84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kJTIwZmxvb3JpbmclMjBwYW5lbHN8ZW58MXx8fHwxNzY3OTk4ODY0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Kursi Tamu Akasia Modern',
+    category: 'Kursi Tamu Akasia',
+    price: 3800000,
+    unit: 'set',
+    size: 'Set 2+1',
+    finish: 'Natural Oil',
+    image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80',
     inStock: true,
   },
   {
     id: 7,
-    name: 'Teak Decorative Strip',
-    woodType: 'Teak',
-    price: 55.00,
-    unit: 'piece',
-    size: '2000 x 100mm',
-    finish: 'Varnished',
-    usage: 'Decorative',
-    image: 'https://images.unsplash.com/photo-1766245070010-6e13043ae47b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kJTIwdGV4dHVyZSUyMG5hdHVyYWx8ZW58MXx8fHwxNzY3OTYyMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    inStock: false,
-  },
-  {
-    id: 8,
-    name: 'Pine Furniture Panel',
-    woodType: 'Pine',
-    price: 52.00,
-    unit: 'm²',
-    size: '2400 x 600mm',
-    finish: 'Polished',
-    usage: 'Furniture',
-    image: 'https://images.unsplash.com/photo-1566918756489-f9687075050a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaW5lJTIwd29vZCUyMGx1bWJlcnxlbnwxfHx8fDE3Njc5OTg4NjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Meja Kerja Industrial',
+    category: 'Meja',
+    price: 2500000,
+    unit: 'unit',
+    size: '120 x 60 x 75 cm',
+    finish: 'Matte Black',
+    image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&q=80',
     inStock: true,
   },
   {
+    id: 8,
+    name: 'Meja Rias Modern Putih',
+    category: 'Meja Rias',
+    price: 2200000,
+    unit: 'unit',
+    size: '100 x 45 x 130 cm',
+    finish: 'Duco White',
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80',
+    inStock: false,
+  },
+  {
     id: 9,
-    name: 'Walnut Decorative Panel',
-    woodType: 'Walnut',
-    price: 135.00,
-    unit: 'm²',
-    size: '2400 x 1200mm',
-    finish: 'Polished',
-    usage: 'Decorative',
-    image: 'https://images.unsplash.com/photo-1732575966442-b2d665c080d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YWxudXQlMjB3b29kJTIwZnVybml0dXJlfGVufDF8fHx8MTc2Nzk5ODg2M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    name: 'Sofa L-Shape Premium',
+    category: 'Sofa',
+    price: 7800000,
+    unit: 'unit',
+    size: '280 x 180 x 85 cm',
+    finish: 'Leather Upholstery',
+    image: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80',
+    inStock: true,
+  },
+  {
+    id: 10,
+    name: 'Almari Besi Sliding Door',
+    category: 'Almari Besi',
+    price: 2400000,
+    unit: 'unit',
+    size: '120 x 50 x 200 cm',
+    finish: 'Grey Powder Coating',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    inStock: true,
+  },
+  {
+    id: 11,
+    name: 'Kursi Tamu Jati Minimalis',
+    category: 'Kursi Tamu Jati',
+    price: 4200000,
+    unit: 'set',
+    size: 'Set 2+1+1',
+    finish: 'Natural Varnish',
+    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80',
+    inStock: true,
+  },
+  {
+    id: 12,
+    name: 'Kursi Tamu Akasia Scandinavian',
+    category: 'Kursi Tamu Akasia',
+    price: 3200000,
+    unit: 'set',
+    size: 'Set 1+1',
+    finish: 'Light Oak',
+    image: 'https://images.unsplash.com/photo-1519947486511-46149fa0a254?w=800&q=80',
     inStock: true,
   },
 ];
 
 export default function App() {
-  const [selectedWoodType, setSelectedWoodType] = useState<string[]>([]);
-  const [selectedUsage, setSelectedUsage] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
   const [selectedFinish, setSelectedFinish] = useState<string[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [cartItems, setCartItems] = useState<number[]>([]);
@@ -132,27 +155,19 @@ export default function App() {
   // Filter logic
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
-      const matchesWoodType =
-        selectedWoodType.length === 0 || selectedWoodType.includes(product.woodType);
-      const matchesUsage =
-        selectedUsage.length === 0 || selectedUsage.includes(product.usage);
+      const matchesCategory =
+        selectedCategory.length === 0 || selectedCategory.includes(product.category);
       const matchesFinish =
         selectedFinish.length === 0 || selectedFinish.includes(product.finish);
 
-      return matchesWoodType && matchesUsage && matchesFinish;
+      return matchesCategory && matchesFinish;
     });
-  }, [selectedWoodType, selectedUsage, selectedFinish]);
+  }, [selectedCategory, selectedFinish]);
 
   // Filter handlers
-  const handleWoodTypeChange = (type: string) => {
-    setSelectedWoodType((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
-    );
-  };
-
-  const handleUsageChange = (usage: string) => {
-    setSelectedUsage((prev) =>
-      prev.includes(usage) ? prev.filter((u) => u !== usage) : [...prev, usage]
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory((prev) =>
+      prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
     );
   };
 
@@ -191,11 +206,9 @@ export default function App() {
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Filter Sidebar */}
               <FilterSidebar
-                selectedWoodType={selectedWoodType}
-                selectedUsage={selectedUsage}
+                selectedCategory={selectedCategory}
                 selectedFinish={selectedFinish}
-                onWoodTypeChange={handleWoodTypeChange}
-                onUsageChange={handleUsageChange}
+                onCategoryChange={handleCategoryChange}
                 onFinishChange={handleFinishChange}
               />
 

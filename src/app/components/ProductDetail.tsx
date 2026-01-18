@@ -1,4 +1,4 @@
-import { X, ShoppingCart, Ruler, Package, Tag } from 'lucide-react';
+import { X, ShoppingCart, Ruler, Package, Tag, MessageCircle } from 'lucide-react';
 import { Product } from './ProductCard';
 
 interface ProductDetailProps {
@@ -8,6 +8,12 @@ interface ProductDetailProps {
 }
 
 export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailProps) {
+  const handleWhatsApp = () => {
+    const message = `Halo, saya tertarik dengan produk:\n\n*${product.name}*\nKategori: ${product.category}\nUkuran: ${product.size}\nFinishing: ${product.finish}\nHarga: Rp ${product.price.toLocaleString('id-ID')} / ${product.unit}\nStatus: ${product.inStock ? 'Tersedia' : 'Stok Habis'}\n\nBisakah saya mendapatkan informasi lebih lanjut?`;
+    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
@@ -37,14 +43,14 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
             {/* Info */}
             <div>
               <div className="mb-4">
-                <span className="text-sm text-[#DC143C] uppercase tracking-wide">
-                  {product.woodType}
+                <span className="text-sm text-[#D4AF37] font-semibold uppercase tracking-wide">
+                  {product.category}
                 </span>
               </div>
               <h3 className="text-3xl text-[#2D2A26] mb-4">{product.name}</h3>
 
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl text-[#2D2A26]">${product.price}</span>
+                <span className="text-4xl font-bold text-[#2D2A26]">Rp {product.price.toLocaleString('id-ID')}</span>
                 <span className="text-lg text-[#706C66]">/ {product.unit}</span>
               </div>
 
@@ -86,8 +92,8 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
                 <div className="flex items-center gap-3 p-3 bg-[#F5F1EB] rounded-lg">
                   <Package className="w-5 h-5 text-[#DC143C]" />
                   <div>
-                    <div className="text-xs text-[#706C66]">Terbaik untuk</div>
-                    <div className="text-sm text-[#2D2A26]">{product.usage}</div>
+                    <div className="text-xs text-[#706C66]">Kategori</div>
+                    <div className="text-sm text-[#2D2A26]">{product.category}</div>
                   </div>
                 </div>
               </div>
@@ -95,29 +101,32 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
               {/* Actions */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
+                  onClick={handleWhatsApp}
+                  className="flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#25D366] text-white hover:bg-[#20BA5A] transition-all hover:shadow-lg"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Tanya via WhatsApp
+                </button>
+                <button
                   onClick={onAddToCart}
                   disabled={!product.inStock}
                   className={`flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-lg transition-all ${product.inStock
-                      ? 'bg-[#DC143C] text-white hover:bg-[#B01030] hover:shadow-lg'
-                      : 'bg-[#E8E3DC] text-[#C4BBAE] cursor-not-allowed'
+                    ? 'bg-[#DC143C] text-white hover:bg-[#B01030] hover:shadow-lg'
+                    : 'bg-[#E8E3DC] text-[#C4BBAE] cursor-not-allowed'
                     }`}
                 >
                   <ShoppingCart className="w-5 h-5" />
                   Tambah ke Keranjang
                 </button>
-                <button className="flex-1 px-6 py-3 rounded-lg border-2 border-[#DC143C] text-[#DC143C] hover:bg-[#DC143C] hover:text-white transition-all">
-                  Minta Ukuran Khusus
-                </button>
               </div>
 
               {/* Description */}
               <div className="mt-8 pt-8 border-t border-[#E8E3DC]">
-                <h4 className="text-lg text-[#2D2A26] mb-3">Tentang Kayu Ini</h4>
+                <h4 className="text-lg text-[#2D2A26] mb-3">Tentang Produk Ini</h4>
                 <p className="text-[#706C66] leading-relaxed">
-                  Kayu {product.woodType.toLowerCase()} berkualitas premium, dipilih dan diproses dengan cermat
-                  untuk daya tahan dan estetika optimal. Sempurna untuk aplikasi {product.usage.toLowerCase()}.
-                  Setiap potongan menampilkan keindahan alami dan pola serat unik yang
-                  membuat {product.woodType.toLowerCase()} menjadi pilihan abadi.
+                  {product.name} adalah produk furniture berkualitas premium dari kategori {product.category}.
+                  Dibuat dengan finishing {product.finish} untuk daya tahan dan estetika optimal.
+                  Setiap produk dipilih dan diproses dengan cermat untuk memastikan kualitas terbaik.
                 </p>
               </div>
             </div>
