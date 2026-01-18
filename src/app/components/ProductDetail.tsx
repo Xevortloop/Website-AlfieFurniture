@@ -1,15 +1,14 @@
-import { X, ShoppingCart, Ruler, Package, Tag, MessageCircle } from 'lucide-react';
+import { X, Ruler, Package, Tag, MessageCircle } from 'lucide-react';
 import { Product } from './ProductCard';
 
 interface ProductDetailProps {
   product: Product;
   onClose: () => void;
-  onAddToCart: () => void;
 }
 
-export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailProps) {
+export function ProductDetail({ product, onClose }: ProductDetailProps) {
   const handleWhatsApp = () => {
-    const message = `Halo, saya tertarik dengan produk:\n\n*${product.name}*\nKategori: ${product.category}\nUkuran: ${product.size}\nFinishing: ${product.finish}\nHarga: Rp ${product.price.toLocaleString('id-ID')} / ${product.unit}\nStatus: ${product.inStock ? 'Tersedia' : 'Stok Habis'}\n\nBisakah saya mendapatkan informasi lebih lanjut?`;
+    const message = `Halo, saya tertarik dengan produk:\n\n*${product.name}*\nKategori: ${product.category}\nUkuran: ${product.size}\nFinishing: ${product.finish}\n\nApakah bisa dibuatkan sesuai dengan spesifikasi ini?`;
     const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -47,27 +46,7 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
                   {product.category}
                 </span>
               </div>
-              <h3 className="text-3xl text-[#2D2A26] mb-4">{product.name}</h3>
-
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold text-[#2D2A26]">Rp {product.price.toLocaleString('id-ID')}</span>
-                <span className="text-lg text-[#706C66]">/ {product.unit}</span>
-              </div>
-
-              {/* Availability */}
-              <div className="mb-6">
-                {product.inStock ? (
-                  <div className="flex items-center gap-2 text-[#DC143C]">
-                    <div className="w-2 h-2 bg-[#DC143C] rounded-full"></div>
-                    <span>Tersedia</span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-2 text-[#706C66]">
-                    <div className="w-2 h-2 bg-[#706C66] rounded-full"></div>
-                    <span>Stok Habis</span>
-                  </div>
-                )}
-              </div>
+              <h3 className="text-3xl text-[#2D2A26] mb-6">{product.name}</h3>
 
               {/* Specifications */}
               <div className="space-y-4 mb-8">
@@ -98,27 +77,14 @@ export function ProductDetail({ product, onClose, onAddToCart }: ProductDetailPr
                 </div>
               </div>
 
-              {/* Actions */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={handleWhatsApp}
-                  className="flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#25D366] text-white hover:bg-[#20BA5A] transition-all hover:shadow-lg"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Tanya via WhatsApp
-                </button>
-                <button
-                  onClick={onAddToCart}
-                  disabled={!product.inStock}
-                  className={`flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-lg transition-all ${product.inStock
-                    ? 'bg-[#DC143C] text-white hover:bg-[#B01030] hover:shadow-lg'
-                    : 'bg-[#E8E3DC] text-[#C4BBAE] cursor-not-allowed'
-                    }`}
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                  Tambah ke Keranjang
-                </button>
-              </div>
+              {/* WhatsApp Button */}
+              <button
+                onClick={handleWhatsApp}
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-[#25D366] text-white hover:bg-[#20BA5A] transition-all hover:shadow-lg"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span className="font-medium">Tanya via WhatsApp</span>
+              </button>
 
               {/* Description */}
               <div className="mt-8 pt-8 border-t border-[#E8E3DC]">

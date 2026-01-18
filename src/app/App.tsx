@@ -149,7 +149,6 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
   const [selectedFinish, setSelectedFinish] = useState<string[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [cartItems, setCartItems] = useState<number[]>([]);
   const [activePage, setActivePage] = useState<string>('products');
 
   // Filter logic
@@ -177,15 +176,9 @@ export default function App() {
     );
   };
 
-  // Cart handlers
-  const handleAddToCart = (productId: number) => {
-    setCartItems((prev) => [...prev, productId]);
-  };
-
   return (
     <div className="min-h-screen bg-[#FAFAF8]">
       <Navigation
-        cartItemCount={cartItems.length}
         activePage={activePage}
         onNavigate={setActivePage}
       />
@@ -226,7 +219,6 @@ export default function App() {
                       key={product.id}
                       product={product}
                       onClick={() => setSelectedProduct(product)}
-                      onAddToCart={() => handleAddToCart(product.id)}
                     />
                   ))}
                 </div>
@@ -247,10 +239,6 @@ export default function App() {
             <ProductDetail
               product={selectedProduct}
               onClose={() => setSelectedProduct(null)}
-              onAddToCart={() => {
-                handleAddToCart(selectedProduct.id);
-                setSelectedProduct(null);
-              }}
             />
           )}
         </>

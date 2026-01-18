@@ -1,13 +1,12 @@
-import { Search, ShoppingCart, Menu } from 'lucide-react';
+import { Search, Menu } from 'lucide-react';
 import { useState } from 'react';
 
 interface NavigationProps {
-  cartItemCount: number;
   activePage: string;
   onNavigate: (page: string) => void;
 }
 
-export function Navigation({ cartItemCount, activePage, onNavigate }: NavigationProps) {
+export function Navigation({ activePage, onNavigate }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -67,24 +66,16 @@ export function Navigation({ cartItemCount, activePage, onNavigate }: Navigation
             </button>
           </div>
 
-          {/* Search and Cart */}
+          {/* Search */}
           <div className="flex items-center gap-4">
             <div className="hidden sm:flex items-center bg-[#F5F1EB] rounded-full px-4 py-2 gap-2">
               <Search className="w-4 h-4 text-[#706C66]" />
               <input
                 type="text"
-                placeholder="Cari produk kayu..."
+                placeholder="Cari produk..."
                 className="bg-transparent border-none outline-none text-sm w-48 text-[#2D2A26] placeholder:text-[#706C66]"
               />
             </div>
-            <button className="relative p-2 hover:bg-[#F5F1EB] rounded-full transition-colors">
-              <ShoppingCart className="w-5 h-5 text-[#2D2A26]" />
-              {cartItemCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#DC143C] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {cartItemCount}
-                </span>
-              )}
-            </button>
             <button
               className="md:hidden p-2 hover:bg-[#F5F1EB] rounded-full transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
