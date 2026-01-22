@@ -3,20 +3,15 @@ import { useState } from 'react';
 
 interface FilterSidebarProps {
   selectedCategory: string[];
-  selectedFinish: string[];
   onCategoryChange: (category: string) => void;
-  onFinishChange: (finish: string) => void;
 }
 
 export function FilterSidebar({
   selectedCategory,
-  selectedFinish,
   onCategoryChange,
-  onFinishChange,
 }: FilterSidebarProps) {
   const [expandedSections, setExpandedSections] = useState({
     category: true,
-    finish: true,
   });
 
   const toggleSection = (section: keyof typeof expandedSections) => {
@@ -24,7 +19,6 @@ export function FilterSidebar({
   };
 
   const categories = ['Meja', 'Meja Rias', 'Sofa', 'Almari Besi', 'Kursi Tamu Jati', 'Kursi Tamu Akasia'];
-  const finishTypes = ['Natural Varnish', 'Glossy Brown', 'Fabric Upholstery', 'Powder Coating', 'Natural Wood', 'Natural Oil', 'Matte Black', 'Duco White', 'Leather Upholstery', 'Grey Powder Coating', 'Light Oak'];
 
   return (
     <aside className="w-full lg:w-64 bg-white rounded-2xl border border-[#E8E3DC] p-6 h-fit sticky top-24">
@@ -54,37 +48,6 @@ export function FilterSidebar({
                 />
                 <span className="text-sm text-[#706C66] group-hover:text-[#2D2A26] transition-colors">
                   {category}
-                </span>
-              </label>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Finish Filter */}
-      <div className="mb-6">
-        <button
-          onClick={() => toggleSection('finish')}
-          className="flex items-center justify-between w-full mb-3"
-        >
-          <span className="text-[#2D2A26]">Finishing</span>
-          <ChevronDown
-            className={`w-4 h-4 text-[#706C66] transition-transform ${expandedSections.finish ? 'rotate-180' : ''
-              }`}
-          />
-        </button>
-        {expandedSections.finish && (
-          <div className="space-y-2">
-            {finishTypes.map((finish) => (
-              <label key={finish} className="flex items-center gap-2 cursor-pointer group">
-                <input
-                  type="checkbox"
-                  checked={selectedFinish.includes(finish)}
-                  onChange={() => onFinishChange(finish)}
-                  className="w-4 h-4 rounded border-[#C4BBAE] text-[#DC143C] focus:ring-[#DC143C]"
-                />
-                <span className="text-sm text-[#706C66] group-hover:text-[#2D2A26] transition-colors">
-                  {finish}
                 </span>
               </label>
             ))}

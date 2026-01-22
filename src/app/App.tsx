@@ -147,7 +147,6 @@ const products: Product[] = [
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
-  const [selectedFinish, setSelectedFinish] = useState<string[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [activePage, setActivePage] = useState<string>('products');
 
@@ -156,23 +155,15 @@ export default function App() {
     return products.filter((product) => {
       const matchesCategory =
         selectedCategory.length === 0 || selectedCategory.includes(product.category);
-      const matchesFinish =
-        selectedFinish.length === 0 || selectedFinish.includes(product.finish);
 
-      return matchesCategory && matchesFinish;
+      return matchesCategory;
     });
-  }, [selectedCategory, selectedFinish]);
+  }, [selectedCategory]);
 
   // Filter handlers
   const handleCategoryChange = (category: string) => {
     setSelectedCategory((prev) =>
       prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
-    );
-  };
-
-  const handleFinishChange = (finish: string) => {
-    setSelectedFinish((prev) =>
-      prev.includes(finish) ? prev.filter((f) => f !== finish) : [...prev, finish]
     );
   };
 
@@ -187,7 +178,7 @@ export default function App() {
         <>
           <Hero />
           {/* Products Section */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <section id="products-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="mb-12">
               <h2 className="text-4xl text-[#2D2A26] mb-4">Koleksi Kayu Kami</h2>
               <p className="text-lg text-[#706C66] max-w-2xl">
@@ -200,9 +191,7 @@ export default function App() {
               {/* Filter Sidebar */}
               <FilterSidebar
                 selectedCategory={selectedCategory}
-                selectedFinish={selectedFinish}
                 onCategoryChange={handleCategoryChange}
-                onFinishChange={handleFinishChange}
               />
 
               {/* Product Grid */}

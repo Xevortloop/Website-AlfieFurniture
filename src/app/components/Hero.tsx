@@ -1,4 +1,19 @@
 export function Hero() {
+  const handleBrowseCatalog = () => {
+    // Scroll to products section
+    const productsSection = document.getElementById('products-section');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleRequestQuote = () => {
+    // Open WhatsApp with quote request message
+    const message = `Halo ALFie Furniture,\n\nSaya tertarik untuk mendapatkan penawaran harga untuk furniture custom.\n\nMohon informasi lebih lanjut mengenai:Terima kasih!`;
+    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section className="relative h-[600px] overflow-hidden">
       {/* Hero Image */}
@@ -21,10 +36,16 @@ export function Hero() {
             Temukan koleksi kayu berkualitas tinggi kami. Dari jati yang elegan hingga oak yang klasik, setiap potongan menceritakan kisah keahlian alam.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-[#DC143C] text-white px-8 py-3 rounded-lg hover:bg-[#B01030] transition-all hover:shadow-lg hover:scale-105">
+            <button
+              onClick={handleBrowseCatalog}
+              className="bg-[#DC143C] text-white px-8 py-3 rounded-lg hover:bg-[#B01030] transition-all hover:shadow-lg hover:scale-105"
+            >
               Jelajahi Katalog
             </button>
-            <button className="bg-[#D4AF37] text-white px-8 py-3 rounded-lg hover:bg-[#C9A961] transition-all hover:shadow-lg hover:scale-105">
+            <button
+              onClick={handleRequestQuote}
+              className="bg-[#D4AF37] text-white px-8 py-3 rounded-lg hover:bg-[#C9A961] transition-all hover:shadow-lg hover:scale-105"
+            >
               Minta Penawaran
             </button>
           </div>
